@@ -10,7 +10,7 @@ This repository represents a complete production-grade re-engineering of a monol
 * **Advanced NLP Capabilities:** Upgraded raw binary sentiment categorization into an advanced linguistic analyzer capable of zero-shot domain tagging, keyword extraction, and deterministic hardware-enforced **Sarcasm Detection**—preventing false positives that traditionally bypass naive ML classifiers.
 
 ## System Architecture
-
+```text
    ┌──────────────────────┐
    │  React (Vite) UI     │ <── Real-time Analytics Dashboard
    └──────────┬───────────┘
@@ -26,22 +26,23 @@ This repository represents a complete production-grade re-engineering of a monol
    ┌──────────────────────┐
    │ Groq Inference Engine│ <── Llama-3.1-8b-instant (Hardware JSON Mode)
    └──────────────────────┘
-
-   🛠️ Tech Stack
+```
+   
+Tech Stack
 Backend: Python, FastAPI, Pydantic v2, Requests, Uvicorn
 
 Frontend: React.js (Hooks, Context), Vite, Inline CSS3 (Custom Dark Palette)
 
 AI/NLP Layer: Groq LPU Architecture, Llama 3.1 (8B Instant)
 
-⚡ Key Architectural Features
+Key Architectural Features
 Hardware-Level JSON Enforcement: Utilizes Groq’s native response_format={"type": "json_object"} to guarantee that the inference engine outputs data matching backend Pydantic schemas structurally, neutralizing runtime formatting bugs.
 
 Separation of Concerns: Zero direct client-to-LLM connections. The frontend communicates strictly via an abstraction layer with the FastAPI gateway, isolating API credentials securely.
 
 Linguistic Sarcasm Filter: Implements a secondary semantic evaluation layer to catch sarcastic feedback, solving a critical real-world production problem where models misinterpret negative feedback masked as praise.
 
-🚀 Local Installation & Setup
+Local Installation & Setup
 1. Backend Setup
 Navigate to the backend directory, spin up a virtual environment, and install dependencies:
 
