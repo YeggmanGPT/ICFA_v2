@@ -64,6 +64,8 @@ export GROQ_API_KEY="your_groq_api_key"
 uvicorn main:app --reload
 The server will initialize on http://localhost:8000.
 
+link to get groq key: https://console.groq.com/keys
+
 2. Frontend Setup
 Open a new terminal window, navigate to the frontend directory, and launch the development environment:
 
