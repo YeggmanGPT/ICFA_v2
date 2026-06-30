@@ -9,6 +9,8 @@ This repository represents a complete production-grade re-engineering of a monol
 * **Training vs Inference:** Replaced a monolithic Scikit-Learn training loop that re-fitted a Logistic Regression pipeline on every API call with hardware-accelerated LLM inference via **Groq's LPUs**.
 * **Advanced NLP Capabilities:** Upgraded raw binary sentiment categorization into an advanced linguistic analyzer capable of zero-shot domain tagging, keyword extraction, and deterministic hardware-enforced **Sarcasm Detection**—preventing false positives that traditionally bypass naive ML classifiers.
 
+  legacy project link: https://github.com/YeggmanGPT/ICFA
+
 ## System Architecture
 ```text
    ┌──────────────────────┐
